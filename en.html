@@ -25,14 +25,14 @@ function applyShotTheme(){var t=document.documentElement.dataset.theme;document.
 function toggleTheme(){var r=document.documentElement,d=r.dataset.theme?r.dataset.theme==="dark":matchMedia("(prefers-color-scheme: dark)").matches,n=d?"light":"dark";r.dataset.theme=n;try{localStorage.setItem("mithkar-theme",n)}catch(e){}applyShotTheme()}
 document.addEventListener("DOMContentLoaded",applyShotTheme);
 </script>
-<link rel="stylesheet" href="styles.css?v=20260829.8">
+<link rel="stylesheet" href="styles.css?v=20260829.9">
 <script defer src="nav.js?v=1"></script>
 </head>
 <body>
 
 <a class="skip-link" href="#main-content">Skip to main content</a>
 
-<header class="site-header">
+<header class="site-header has-drawer">
   <div class="wrap">
     <a class="brand" href="en.html" aria-label="Mithkar — home">
       <img src="assets/icon.png" alt="Mithkar app icon">
@@ -45,6 +45,7 @@ document.addEventListener("DOMContentLoaded",applyShotTheme);
         <a href="#screens" class="hide-mobile">Screens</a>
         <a href="privacy-en.html">Privacy</a>
         <a href="contact-en.html">Contact us</a>
+        <a href="index.html" class="lang lang-drawer">العربية</a>
       </nav>
       <div class="header-actions">
         <button class="theme-toggle" type="button" onclick="toggleTheme()" aria-label="Toggle theme" title="Toggle theme"><svg class="icon icon-sm icon-sun" aria-hidden="true" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg><svg class="icon icon-sm icon-moon" aria-hidden="true" viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg></button>

@@ -351,6 +351,7 @@ img { max-width: 100%; display: block; }
   background: rgb(0 0 0 / .45);
 }
 .nav-scrim[hidden] { display: none; }
+.lang-drawer { display: none; }
 
 @media (max-width: 48rem) {
   .nav-toggle { display: grid; }
@@ -372,6 +373,10 @@ img { max-width: 100%; display: block; }
   .nav.open, [dir="rtl"] .nav.open { transform: translateX(0); }
   .nav .hide-mobile { display: block; }
   .nav-close { display: grid; align-self: flex-start; margin-bottom: .5rem; }
+  /* Pages with a drawer move the language switch to the bottom of it; pages
+     without one (privacy, contact) keep it in the top bar. */
+  .lang-drawer { display: inline-flex; margin-top: auto; }
+  .has-drawer .header-actions .lang { display: none; }
 }
 
 @media (prefers-reduced-motion: reduce) {
