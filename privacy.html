@@ -12,7 +12,7 @@
 (function(){try{var t=localStorage.getItem("mithkar-theme");if(t)document.documentElement.dataset.theme=t}catch(e){}})();
 function toggleTheme(){var r=document.documentElement,d=r.dataset.theme?r.dataset.theme==="dark":matchMedia("(prefers-color-scheme: dark)").matches,n=d?"light":"dark";r.dataset.theme=n;try{localStorage.setItem("mithkar-theme",n)}catch(e){}}
 </script>
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="styles.css?v=2">
 <style>
   .prose .en { direction: ltr; text-align: left;
                font-family: "IBM Plex Sans", -apple-system, "Segoe UI", sans-serif; }
