@@ -20,7 +20,7 @@
 (function(){try{var t=localStorage.getItem("mithkar-theme");if(t)document.documentElement.dataset.theme=t}catch(e){}})();
 function toggleTheme(){var r=document.documentElement,d=r.dataset.theme?r.dataset.theme==="dark":matchMedia("(prefers-color-scheme: dark)").matches,n=d?"light":"dark";r.dataset.theme=n;try{localStorage.setItem("mithkar-theme",n)}catch(e){}}
 </script>
-<link rel="stylesheet" href="styles.css?v=20260829.6">
+<link rel="stylesheet" href="styles.css?v=20260829.7">
 </head>
 <body>
 
@@ -51,10 +51,9 @@ function toggleTheme(){var r=document.documentElement,d=r.dataset.theme?r.datase
     </div>
     <p class="muted">البريد الإلكتروني للدعم والاستفسارات</p>
     <div class="contact-email">
-      <span id="contact-email" dir="ltr">support@ibtihal.dev</span>
-      <button class="btn-copy" type="button" onclick="copyEmail()">نسخ العنوان</button>
+      <span dir="ltr">support@ibtihal.dev</span>
+      <a class="btn-mail" href="mailto:support@ibtihal.dev">أرسل بريدًا</a>
     </div>
-    <p class="copy-status" id="copy-status" role="status" aria-live="polite"></p>
     <p class="muted">نحرص على قراءة كل رسالة، والرد خلال أيام قليلة بإذن الله.</p>
   </div>
 
@@ -64,7 +63,6 @@ function toggleTheme(){var r=document.documentElement,d=r.dataset.theme?r.datase
     <li><svg class="icon icon-sm" aria-hidden="true" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg> الإبلاغ عن خلل أو مشكلة تقنية</li>
     <li><svg class="icon icon-sm" aria-hidden="true" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg> ملاحظات على نصوص الأذكار أو مصادرها</li>
     <li><svg class="icon icon-sm" aria-hidden="true" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg> استفسارات الخصوصية والبيانات</li>
-    <li><svg class="icon icon-sm" aria-hidden="true" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg> طلبات الإعلام والتغطية الصحفية</li>
   </ul>
 
   <h2>عند الإبلاغ عن مشكلة</h2>
@@ -95,31 +93,6 @@ function toggleTheme(){var r=document.documentElement,d=r.dataset.theme?r.datase
     <span>© 2026 مذكار. جميع الحقوق محفوظة.</span>
   </div>
 </footer>
-
-<script>
-function copyEmail(){
-  var value = document.getElementById("contact-email").textContent.trim();
-  var status = document.getElementById("copy-status");
-  function done(){ status.textContent = "تم نسخ العنوان."; }
-  function failed(){ status.textContent = "تعذّر النسخ تلقائيًا — حدّد العنوان وانسخه يدويًا."; }
-  if (navigator.clipboard && navigator.clipboard.writeText) {
-    navigator.clipboard.writeText(value).then(done, failed);
-    return;
-  }
-  try {
-    var field = document.createElement("textarea");
-    field.value = value;
-    field.setAttribute("readonly", "");
-    field.style.position = "absolute";
-    field.style.insetInlineStart = "-9999px";
-    document.body.appendChild(field);
-    field.select();
-    document.execCommand("copy");
-    document.body.removeChild(field);
-    done();
-  } catch (e) { failed(); }
-}
-</script>
 
 </body>
 </html>

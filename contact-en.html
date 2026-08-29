@@ -20,7 +20,7 @@
 (function(){try{var t=localStorage.getItem("mithkar-theme");if(t)document.documentElement.dataset.theme=t}catch(e){}})();
 function toggleTheme(){var r=document.documentElement,d=r.dataset.theme?r.dataset.theme==="dark":matchMedia("(prefers-color-scheme: dark)").matches,n=d?"light":"dark";r.dataset.theme=n;try{localStorage.setItem("mithkar-theme",n)}catch(e){}}
 </script>
-<link rel="stylesheet" href="styles.css?v=20260829.6">
+<link rel="stylesheet" href="styles.css?v=20260829.7">
 </head>
 <body>
 
@@ -51,10 +51,9 @@ function toggleTheme(){var r=document.documentElement,d=r.dataset.theme?r.datase
     </div>
     <p class="muted">Support and general enquiries</p>
     <div class="contact-email">
-      <span id="contact-email" dir="ltr">support@ibtihal.dev</span>
-      <button class="btn-copy" type="button" onclick="copyEmail()">Copy address</button>
+      <span dir="ltr">support@ibtihal.dev</span>
+      <a class="btn-mail" href="mailto:support@ibtihal.dev">Send email</a>
     </div>
-    <p class="copy-status" id="copy-status" role="status" aria-live="polite"></p>
     <p class="muted">Every message is read, and we usually reply within a few days.</p>
   </div>
 
@@ -64,7 +63,6 @@ function toggleTheme(){var r=document.documentElement,d=r.dataset.theme?r.datase
     <li><svg class="icon icon-sm" aria-hidden="true" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg> Bug reports and technical problems</li>
     <li><svg class="icon icon-sm" aria-hidden="true" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg> Notes on the adhkar texts or their sources</li>
     <li><svg class="icon icon-sm" aria-hidden="true" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg> Privacy and data questions</li>
-    <li><svg class="icon icon-sm" aria-hidden="true" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg> Press and media enquiries</li>
   </ul>
 
   <h2>Reporting a problem</h2>
@@ -95,31 +93,6 @@ function toggleTheme(){var r=document.documentElement,d=r.dataset.theme?r.datase
     <span>© 2026 Mithkar. All rights reserved.</span>
   </div>
 </footer>
-
-<script>
-function copyEmail(){
-  var value = document.getElementById("contact-email").textContent.trim();
-  var status = document.getElementById("copy-status");
-  function done(){ status.textContent = "Address copied."; }
-  function failed(){ status.textContent = "Could not copy automatically — select the address and copy it manually."; }
-  if (navigator.clipboard && navigator.clipboard.writeText) {
-    navigator.clipboard.writeText(value).then(done, failed);
-    return;
-  }
-  try {
-    var field = document.createElement("textarea");
-    field.value = value;
-    field.setAttribute("readonly", "");
-    field.style.position = "absolute";
-    field.style.insetInlineStart = "-9999px";
-    document.body.appendChild(field);
-    field.select();
-    document.execCommand("copy");
-    document.body.removeChild(field);
-    done();
-  } catch (e) { failed(); }
-}
-</script>
 
 </body>
 </html>

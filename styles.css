@@ -302,13 +302,12 @@ img { max-width: 100%; display: block; }
   border-radius: var(--r-sm); padding: .55rem 1.1rem;
   font-weight: 600; unicode-bidi: isolate; user-select: all;
 }
-.btn-copy {
+.btn-mail {
   border: 1px solid var(--line); background: transparent; color: var(--ink);
   border-radius: var(--r-sm); padding: .55rem 1.2rem;
-  font: inherit; font-weight: 600; cursor: pointer;
+  font: inherit; font-weight: 600;
 }
-.btn-copy:hover { border-color: var(--green); color: var(--green); }
-.copy-status { min-height: 1.6rem; margin-top: .6rem; color: var(--green); font-weight: 600; }
+.btn-mail:hover { border-color: var(--green); color: var(--green); text-decoration: none; }
 .plain-list { margin-block: .5rem 0; padding-inline-start: 1.25rem; color: var(--muted); }
 
 @media (max-width: 56rem) {
