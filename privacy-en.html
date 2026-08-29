@@ -15,7 +15,7 @@
 (function(){try{var t=localStorage.getItem("mithkar-theme");if(t)document.documentElement.dataset.theme=t}catch(e){}})();
 function toggleTheme(){var r=document.documentElement,d=r.dataset.theme?r.dataset.theme==="dark":matchMedia("(prefers-color-scheme: dark)").matches,n=d?"light":"dark";r.dataset.theme=n;try{localStorage.setItem("mithkar-theme",n)}catch(e){}}
 </script>
-<link rel="stylesheet" href="styles.css?v=20260829.3">
+<link rel="stylesheet" href="styles.css?v=20260829.4">
 </head>
 <body>
 
@@ -39,22 +39,22 @@ function toggleTheme(){var r=document.documentElement,d=r.dataset.theme?r.datase
   <h1>Privacy Policy</h1>
   <p class="muted">Last updated: August 29, 2026</p>
 
-  <p>Mithkar is an offline-first adhkar and habits app. It requires no account and contains no ads, trackers, or analytics.</p>
+  <p>Mithkar is a daily adhkar and habits app designed to work offline. It requires no account and includes no advertising, tracking, or analytics.</p>
 
   <h2>Data stored on your device</h2>
-  <p>Your daily progress, streaks, habits, and settings are stored locally on your device only (and in an on-device shared container so the widget can read them). We do not upload this data to any server and cannot access it.</p>
+  <p>Your daily progress, streaks, habits, and settings are stored locally on your device. Widgets access this information through an on-device shared container. We do not upload it to a server and cannot access it.</p>
 
   <h2>Location</h2>
-  <p>If you enable prayer times, your coordinates (latitude and longitude) are sent over an encrypted connection to <a href="https://aladhan.com">AlAdhan.com</a> to fetch accurate times. No personal identifier accompanies the request, and the app keeps no history of your locations. You can disable location use at any time in the app or system settings, and the app will fall back to computing prayer times on-device.</p>
+  <p>When you enable prayer times, your coordinates—latitude and longitude—are sent over an encrypted connection to <a href="https://aladhan.com">AlAdhan.com</a> to retrieve accurate times. No personal identifier accompanies the request, and the app keeps no history of your locations. You can turn off location access at any time in the app or system settings; Mithkar will then calculate prayer times on your device.</p>
 
-  <h2>Notifications</h2>
-  <p>Reminders are local notifications scheduled on your device; they never pass through a server.</p>
+  <h2>Reminders</h2>
+  <p>Reminders are local notifications scheduled on your device. They never pass through a server.</p>
 
   <h2>Data we do not collect</h2>
-  <p>We collect no personal information: no names, no email addresses, no advertising identifiers, no usage logs.</p>
+  <p>We do not collect personal information or usage data: no names, email addresses, advertising identifiers, or usage logs.</p>
 
-  <h2>Changes &amp; contact</h2>
-  <p>If this policy materially changes, we will update this page. Questions: <a href="mailto:ibtihal.alhejaili@gmail.com">ibtihal.alhejaili@gmail.com</a></p>
+  <h2>Changes and contact</h2>
+  <p>We will update this page if this policy changes materially. For questions, contact <a href="mailto:ibtihal.alhejaili@gmail.com">ibtihal.alhejaili@gmail.com</a>.</p>
 </main>
 
 <footer class="site-footer">
@@ -67,7 +67,7 @@ function toggleTheme(){var r=document.documentElement,d=r.dataset.theme?r.datase
       <a href="en.html">Home</a>
       <a href="mailto:ibtihal.alhejaili@gmail.com">Contact</a>
     </nav>
-    <span>© 2026 Mithkar</span>
+    <span>© 2026 Mithkar. All rights reserved.</span>
   </div>
 </footer>
 
