@@ -9,6 +9,10 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Amiri:wght@700&display=swap" rel="stylesheet">
+<script>
+(function(){try{var t=localStorage.getItem("mithkar-theme");if(t)document.documentElement.dataset.theme=t}catch(e){}})();
+function toggleTheme(){var r=document.documentElement,d=r.dataset.theme?r.dataset.theme==="dark":matchMedia("(prefers-color-scheme: dark)").matches,n=d?"light":"dark";r.dataset.theme=n;try{localStorage.setItem("mithkar-theme",n)}catch(e){}}
+</script>
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -23,6 +27,7 @@
       <a href="#features" class="hide-mobile">المميزات</a>
       <a href="#screens" class="hide-mobile">من داخل التطبيق</a>
       <a href="privacy.html">الخصوصية</a>
+      <button class="theme-toggle" onclick="toggleTheme()" aria-label="تبديل المظهر"><svg class="icon icon-sm icon-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg><svg class="icon icon-sm icon-moon" viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg></button>
       <a href="en.html" class="lang">English</a>
     </nav>
   </div>
@@ -51,7 +56,7 @@
       </div>
     </div>
     <div class="hero-device">
-      <div class="device"><img src="assets/01_home_ar.png" alt="الشاشة الرئيسية لتطبيق مذكار" width="1200" height="2607"></div>
+      <div class="device"><img src="assets/01_home_ar.png" alt="الشاشة الرئيسية لتطبيق مذكار" width="736" height="1600"></div>
     </div>
   </div>
 </section>
@@ -107,15 +112,15 @@
     </div>
     <div class="screens">
       <figure class="screen">
-        <div class="device"><img src="assets/05_reading_ar.png" alt="صفحة قراءة الأذكار" loading="lazy"></div>
+        <div class="device"><img src="assets/05_reading_ar.png" alt="صفحة قراءة الأذكار" width="736" height="1600" loading="lazy"></div>
         <figcaption>قراءة هادئة بخط أميري</figcaption>
       </figure>
       <figure class="screen">
-        <div class="device"><img src="assets/01_home_ar.png" alt="الشاشة الرئيسية" loading="lazy"></div>
+        <div class="device"><img src="assets/01_home_ar.png" alt="الشاشة الرئيسية" width="736" height="1600" loading="lazy"></div>
         <figcaption>يومك في لمحة واحدة</figcaption>
       </figure>
       <figure class="screen">
-        <div class="device"><img src="assets/02_progress_ar.png" alt="شاشة التقدم والتقويم الهجري" loading="lazy"></div>
+        <div class="device"><img src="assets/02_progress_ar.png" alt="شاشة التقدم والتقويم الهجري" width="736" height="1600" loading="lazy"></div>
         <figcaption>تقدمك بالتقويم الهجري</figcaption>
       </figure>
     </div>
@@ -168,7 +173,7 @@
       <a href="privacy.html">سياسة الخصوصية</a>
       <a href="mailto:ibtihal.alhejaili@gmail.com">تواصل معنا</a>
     </nav>
-    <span>© ٢٠٢٦ مذكار</span>
+    <span>© 2026 مذكار</span>
   </div>
 </footer>
 

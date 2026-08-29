@@ -16,7 +16,7 @@
   --r-sm: 12px; --r-md: 16px; --r-lg: 24px;
 }
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root:not([data-theme="light"]) {
     --bg: #12160F;
     --surface: #1A2018;
     --ink: #E9E7DE;
@@ -31,6 +31,21 @@
     --shadow-sm: 0 1px 2px rgb(0 0 0 / .3), 0 4px 12px rgb(0 0 0 / .25);
     --shadow-lg: 0 24px 64px rgb(0 0 0 / .5);
   }
+}
+:root[data-theme="dark"] {
+    --bg: #12160F;
+    --surface: #1A2018;
+    --ink: #E9E7DE;
+    --muted: #9FA89B;
+    --line: #2A322A;
+    --green: #7CC59A;
+    --green-deep: #5FB183;
+    --green-ink: #CBE8D6;
+    --green-soft: #1D2B21;
+    --gold: #D9A83C;
+    --gold-soft: #2A2314;
+    --shadow-sm: 0 1px 2px rgb(0 0 0 / .3), 0 4px 12px rgb(0 0 0 / .25);
+    --shadow-lg: 0 24px 64px rgb(0 0 0 / .5);
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -69,6 +84,20 @@ img { max-width: 100%; display: block; }
   padding: .3rem .9rem; color: var(--ink);
 }
 .nav .lang:hover { border-color: var(--green); color: var(--green); }
+.theme-toggle {
+  width: 2.3rem; height: 2.3rem; border-radius: 999px;
+  border: 1px solid var(--line); background: transparent; color: var(--ink);
+  display: grid; place-items: center; cursor: pointer; padding: 0;
+}
+.theme-toggle:hover { border-color: var(--green); color: var(--green); }
+.theme-toggle .icon-sun { display: none; }
+.theme-toggle .icon-moon { display: block; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .theme-toggle .icon-sun { display: block; }
+  :root:not([data-theme="light"]) .theme-toggle .icon-moon { display: none; }
+}
+:root[data-theme="dark"] .theme-toggle .icon-sun { display: block; }
+:root[data-theme="dark"] .theme-toggle .icon-moon { display: none; }
 
 /* ---------- buttons ---------- */
 .btn-store {
@@ -192,7 +221,7 @@ img { max-width: 100%; display: block; }
 
 /* CTA band */
 .cta-band {
-  background: linear-gradient(135deg, var(--green-deep), var(--green) 130%);
+  background: linear-gradient(135deg, #14512F, #2A7A50 130%);
   border-radius: var(--r-lg); padding: 3.5rem 2rem; text-align: center; color: #F2F7F1;
 }
 .cta-band h2 { font-size: clamp(1.5rem, 3vw, 2rem); margin-bottom: .6rem; }
