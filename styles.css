@@ -289,6 +289,28 @@ img { max-width: 100%; display: block; }
 .prose .muted { color: var(--muted); font-size: .9rem; }
 .prose .divider { border: 0; border-top: 1px solid var(--line); margin-block: 3rem; }
 
+/* contact page */
+.contact-card { text-align: center; margin-block: 1.5rem 2.5rem; }
+.contact-card .icon-tile { margin-inline: auto; }
+.contact-email {
+  display: flex; align-items: center; justify-content: center;
+  gap: .75rem; flex-wrap: wrap; margin-top: .85rem;
+}
+.contact-email span {
+  background: var(--green-soft); color: var(--green-ink);
+  border: 1px solid color-mix(in srgb, var(--green) 25%, transparent);
+  border-radius: var(--r-sm); padding: .55rem 1.1rem;
+  font-weight: 600; unicode-bidi: isolate; user-select: all;
+}
+.btn-copy {
+  border: 1px solid var(--line); background: transparent; color: var(--ink);
+  border-radius: var(--r-sm); padding: .55rem 1.2rem;
+  font: inherit; font-weight: 600; cursor: pointer;
+}
+.btn-copy:hover { border-color: var(--green); color: var(--green); }
+.copy-status { min-height: 1.6rem; margin-top: .6rem; color: var(--green); font-weight: 600; }
+.plain-list { margin-block: .5rem 0; padding-inline-start: 1.25rem; color: var(--muted); }
+
 @media (max-width: 56rem) {
   .hero .wrap { grid-template-columns: 1fr; text-align: center; gap: 3rem; padding-block: 3rem 4rem; }
   .hero .lede { margin-inline: auto; }
