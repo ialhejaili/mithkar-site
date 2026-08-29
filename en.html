@@ -3,125 +3,174 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Mithkar — Your daily adhkar & habits</title>
+<title>Mithkar — Your daily adhkar &amp; habits</title>
 <meta name="description" content="Mithkar: an iOS app for daily adhkar and spiritual habits — morning, evening, sleep, and after-prayer remembrances, prayer times, and streaks. Offline-first, no accounts.">
 <link rel="icon" href="assets/icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;700&family=Amiri:wght@700&display=swap" rel="stylesheet">
-<style>
-  :root {
-    --bg: #FAF8F2; --card: #FFFFFF; --ink: #1C2B21; --muted: #5D6B61;
-    --green: #1F6A43; --green-soft: #E4EFE7; --gold: #B8860B;
-    --radius: 20px;
-  }
-  @media (prefers-color-scheme: dark) {
-    :root { --bg: #131712; --card: #1D231C; --ink: #E8E6DD; --muted: #A3AB9F;
-            --green: #6FB98A; --green-soft: #22302666; --gold: #D9A83C; }
-  }
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  body { font-family: "IBM Plex Sans", -apple-system, sans-serif;
-         background: var(--bg); color: var(--ink); line-height: 1.7; }
-  a { color: var(--green); text-decoration: none; }
-  .wrap { max-width: 68rem; margin: 0 auto; padding: 0 1.5rem; }
-
-  header { display: flex; align-items: center; justify-content: space-between; padding: 1.25rem 0; }
-  .brand { display: flex; align-items: center; gap: .75rem; font-weight: 700; font-size: 1.2rem; color: var(--ink); }
-  .brand img { width: 40px; height: 40px; border-radius: 10px; }
-  nav { display: flex; gap: 1.5rem; font-size: .95rem; }
-
-  .hero { display: grid; grid-template-columns: 1.1fr .9fr; gap: 3rem; align-items: center; padding: 3rem 0 4rem; }
-  .hero h1 { font-family: "Amiri", serif; font-size: 3.2rem; color: var(--green); line-height: 1.25; }
-  .hero p.tag { font-size: 1.3rem; margin: .75rem 0 1.75rem; }
-  .hero p.sub { color: var(--muted); margin-bottom: 2rem; }
-  .store-badge { display: inline-flex; flex-direction: column; align-items: center; gap: .35rem; }
-  .store-btn { display: inline-flex; align-items: center; gap: .6rem; background: var(--ink); color: var(--bg);
-               padding: .8rem 1.6rem; border-radius: 14px; font-weight: 500; opacity: .55; cursor: default; }
-  @media (prefers-color-scheme: dark) { .store-btn { background: #E8E6DD; color: #131712; } }
-  .store-note { font-size: .85rem; color: var(--gold); font-weight: 500; }
-  .hero .phone { justify-self: center; }
-  .phone img { width: 100%; max-width: 320px; border-radius: 34px;
-               box-shadow: 0 24px 60px rgb(31 106 67 / .22); border: 1px solid rgb(0 0 0 / .06); }
-
-  h2.section { font-size: 1.7rem; color: var(--green); margin-bottom: 1.75rem; text-align: center; }
-  .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); gap: 1.25rem; padding-bottom: 4rem; }
-  .feature { background: var(--card); border-radius: var(--radius); padding: 1.5rem;
-             box-shadow: 0 4px 18px rgb(0 0 0 / .05); }
-  .feature .emoji { font-size: 1.8rem; display: block; margin-bottom: .6rem; }
-  .feature h3 { font-size: 1.05rem; margin-bottom: .35rem; }
-  .feature p { font-size: .92rem; color: var(--muted); }
-
-  .shots { display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap; padding-bottom: 4rem; }
-  .shots img { width: 240px; border-radius: 26px; box-shadow: 0 14px 36px rgb(0 0 0 / .14); }
-
-  .privacy-band { background: var(--green-soft); border-radius: var(--radius);
-                  padding: 2.25rem; text-align: center; margin-bottom: 4rem; }
-  .privacy-band h2 { color: var(--green); font-size: 1.4rem; margin-bottom: .5rem; }
-  .privacy-band p { color: var(--muted); max-width: 36rem; margin: 0 auto .9rem; }
-
-  footer { border-top: 1px solid rgb(0 0 0 / .08); padding: 1.75rem 0 2.5rem;
-           display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1rem;
-           color: var(--muted); font-size: .9rem; }
-  @media (max-width: 46rem) {
-    .hero { grid-template-columns: 1fr; text-align: center; padding-top: 1.5rem; }
-    .hero h1 { font-size: 2.4rem; }
-    nav { gap: 1rem; }
-  }
-</style>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Amiri:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<div class="wrap">
 
-<header>
-  <div class="brand"><img src="assets/icon.png" alt="Mithkar app icon"> Mithkar</div>
-  <nav>
-    <a href="#features">Features</a>
-    <a href="privacy.html">Privacy</a>
-    <a href="index.html">العربية</a>
-  </nav>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="#">
+      <img src="assets/icon.png" alt="Mithkar app icon">
+      <span class="name-latin">Mithkar</span>
+    </a>
+    <nav class="nav">
+      <a href="#features" class="hide-mobile">Features</a>
+      <a href="#screens" class="hide-mobile">Screens</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="index.html" class="lang">العربية</a>
+    </nav>
+  </div>
 </header>
 
 <section class="hero">
-  <div>
-    <h1>Mithkar</h1>
-    <p class="tag">Your daily adhkar and habits — in one beautiful app.</p>
-    <p class="sub">Morning, evening, sleep, and after-prayer adhkar, the complete Hisn al-Muslim library, prayer times, and streaks — all offline, no accounts.</p>
-    <div class="store-badge">
-      <span class="store-btn">&#63743; Download on the App Store</span>
-      <span class="store-note">Coming soon</span>
+  <div class="wrap">
+    <div>
+      <span class="eyebrow-pill">
+        <svg class="icon icon-sm" viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+        Your daily dhikr companion — for iPhone &amp; iPad
+      </span>
+      <h1>Your daily adhkar and habits,<br><span class="accent">in one beautiful app.</span></h1>
+      <p class="lede">Morning, evening, sleep, and after-prayer adhkar, the complete Hisn al-Muslim library, prayer times, and streaks — all offline, with no accounts.</p>
+      <div class="cta-row">
+        <a class="btn-store disabled" href="#" aria-disabled="true">
+          <svg viewBox="0 0 384 512" aria-hidden="true"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.7-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>
+          <span class="two-line"><small>Download on the</small>App Store</span>
+        </a>
+        <span class="soon">Coming soon</span>
+      </div>
+      <div class="trust-row">
+        <span><svg class="icon icon-sm" viewBox="0 0 24 24"><path d="M12 20h.01"/><path d="M8.5 16.429a5 5 0 0 1 7 0"/><path d="M5 12.859a10 10 0 0 1 5.17-2.69"/><path d="M19 12.859a10 10 0 0 0-2.007-1.523"/><path d="M2 8.82a15 15 0 0 1 4.177-2.643"/><path d="M22 8.82a15 15 0 0 0-11.288-3.764"/><path d="m2 2 20 20"/></svg> Works offline</span>
+        <span><svg class="icon icon-sm" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m4.9 4.9 14.2 14.2"/></svg> No ads or tracking</span>
+        <span><svg class="icon icon-sm" viewBox="0 0 24 24"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13"/><path d="M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5A4.8 8 0 0 1 12 8a4.8 8 0 0 1 4.5-5 2.5 2.5 0 0 1 0 5"/></svg> Completely free</span>
+      </div>
+    </div>
+    <div class="hero-device">
+      <div class="device"><img src="assets/01_home_en.png" alt="Mithkar home screen" width="1200" height="2607"></div>
     </div>
   </div>
-  <div class="phone"><img src="assets/01_home_en.png" alt="Mithkar home screen"></div>
 </section>
 
-<h2 class="section" id="features">Why Mithkar?</h2>
-<section class="features">
-  <div class="feature"><span class="emoji">📖</span><h3>Calm reading</h3><p>A serene reading page in the beautiful Amiri typeface, with a repetition counter — tap anywhere to count.</p></div>
-  <div class="feature"><span class="emoji">🕌</span><h3>Prayer times</h3><p>Accurate times for your location, with an offline fallback calculation.</p></div>
-  <div class="feature"><span class="emoji">🔥</span><h3>Streaks</h3><p>A daily streak and a Hijri calendar of your progress, with stats that keep you going.</p></div>
-  <div class="feature"><span class="emoji">🌱</span><h3>Your own habits</h3><p>Create habits that bundle your daily awrad in one place, with custom counters and targets.</p></div>
-  <div class="feature"><span class="emoji">📱</span><h3>Smart widgets</h3><p>Four home screen widgets: context-aware adhkar, streak, prayer times, and an interactive counter.</p></div>
-  <div class="feature"><span class="emoji">🔒</span><h3>Total privacy</h3><p>No accounts, no ads, no tracking — your data stays on your device.</p></div>
+<section class="section" id="features">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Features</div>
+      <h2>Everything you need to stay consistent</h2>
+      <p>Mithkar is designed to be calm, beautiful, and fast — helping you keep going without getting in your way.</p>
+    </div>
+    <div class="features">
+      <div class="card">
+        <div class="icon-tile"><svg class="icon" viewBox="0 0 24 24"><path d="M12 7v14"/><path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/></svg></div>
+        <h3>Calm reading</h3>
+        <p>A serene reading page in the beautiful Amiri typeface, with a repetition counter — tap anywhere to count.</p>
+      </div>
+      <div class="card">
+        <div class="icon-tile"><svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+        <h3>Prayer times</h3>
+        <p>Accurate times for your location, with an offline fallback calculation that never leaves you without.</p>
+      </div>
+      <div class="card">
+        <div class="icon-tile gold"><svg class="icon" viewBox="0 0 24 24"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg></div>
+        <h3>Streaks</h3>
+        <p>A daily streak and a Hijri calendar of your progress, with stats that keep you motivated.</p>
+      </div>
+      <div class="card">
+        <div class="icon-tile"><svg class="icon" viewBox="0 0 24 24"><path d="M7 20h10"/><path d="M10 20c5.5-2.5.8-6.4 3-10"/><path d="M9.5 9.4c1.1.8 1.8 2.2 2.3 3.7-2 .4-3.5.4-4.8-.3-1.2-.6-2.3-1.9-3-4.2 2.8-.5 4.4 0 5.5.8z"/><path d="M14.1 6a7 7 0 0 0-1.1 4c1.9-.1 3.3-.6 4.3-1.4 1-1 1.6-2.3 1.7-4.6-3.1.2-4.5 1-4.9 2z"/></svg></div>
+        <h3>Your own habits</h3>
+        <p>Create habits that bundle your daily awrad in one place, with custom counters, targets, and per-habit streaks.</p>
+      </div>
+      <div class="card">
+        <div class="icon-tile"><svg class="icon" viewBox="0 0 24 24"><rect width="7" height="7" x="3" y="3" rx="1"/><rect width="7" height="7" x="14" y="3" rx="1"/><rect width="7" height="7" x="14" y="14" rx="1"/><rect width="7" height="7" x="3" y="14" rx="1"/></svg></div>
+        <h3>Smart widgets</h3>
+        <p>Four home screen widgets: context-aware adhkar, streak, prayer times, and an interactive counter.</p>
+      </div>
+      <div class="card">
+        <div class="icon-tile"><svg class="icon" viewBox="0 0 24 24"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1 1 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg></div>
+        <h3>Total privacy</h3>
+        <p>No accounts, no ads, no tracking — your data stays on your device.</p>
+      </div>
+    </div>
+  </div>
 </section>
 
-<h2 class="section">Inside the app</h2>
-<section class="shots">
-  <img src="assets/05_reading_en.png" alt="Adhkar reading page">
-  <img src="assets/01_home_en.png" alt="Home screen">
-  <img src="assets/02_progress_en.png" alt="Progress screen with Hijri calendar">
+<section class="section tinted" id="screens">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Inside the app</div>
+      <h2>Authentic Arabic-first design</h2>
+      <p>An Arabic-first interface with full English support, light and dark modes, and the Hijri calendar.</p>
+    </div>
+    <div class="screens">
+      <figure class="screen">
+        <div class="device"><img src="assets/05_reading_en.png" alt="Adhkar reading page" loading="lazy"></div>
+        <figcaption>Calm reading in Amiri</figcaption>
+      </figure>
+      <figure class="screen">
+        <div class="device"><img src="assets/01_home_en.png" alt="Home screen" loading="lazy"></div>
+        <figcaption>Your day at a glance</figcaption>
+      </figure>
+      <figure class="screen">
+        <div class="device"><img src="assets/02_progress_en.png" alt="Progress screen with Hijri calendar" loading="lazy"></div>
+        <figcaption>Progress on the Hijri calendar</figcaption>
+      </figure>
+    </div>
+  </div>
 </section>
 
-<section class="privacy-band">
-  <h2>Your privacy is not a product</h2>
-  <p>Mithkar runs entirely on your device: no accounts, no ads, no trackers. The only thing that ever leaves your device — if you enable it — is your coordinates, to fetch prayer times.</p>
-  <a href="privacy.html">Read the full privacy policy →</a>
+<section class="section" id="privacy">
+  <div class="wrap">
+    <div class="privacy-grid">
+      <div>
+        <div class="badge-lock"><svg class="icon" viewBox="0 0 24 24"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
+        <h2>Your privacy is not a product</h2>
+        <p>Mithkar runs entirely on your device. The only thing that ever leaves it — if you enable it — is your coordinates, to fetch prayer times.</p>
+        <a href="privacy.html">Read the full privacy policy →</a>
+      </div>
+      <ul class="check-list">
+        <li><svg class="icon icon-sm" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg> No accounts, no sign-in</li>
+        <li><svg class="icon icon-sm" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg> Your data is stored on your device only</li>
+        <li><svg class="icon icon-sm" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg> No ads, no analytics, no trackers</li>
+        <li><svg class="icon icon-sm" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg> Location is optional and never logged</li>
+      </ul>
+    </div>
+  </div>
 </section>
 
-<footer>
-  <span>© 2026 Mithkar</span>
-  <span><a href="mailto:ibtihal.alhejaili@gmail.com">Contact</a> · <a href="privacy.html">Privacy policy</a></span>
+<section class="section">
+  <div class="wrap">
+    <div class="cta-band">
+      <h2>Make dhikr a daily habit</h2>
+      <p>Mithkar is coming soon to the App Store — free, on iPhone and iPad.</p>
+      <div class="cta-row" style="justify-content: center;">
+        <a class="btn-store disabled" href="#" aria-disabled="true">
+          <svg viewBox="0 0 384 512" aria-hidden="true"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.7-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>
+          <span class="two-line"><small>Download on the</small>App Store</span>
+        </a>
+        <span class="soon">Coming soon</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <a class="brand" href="#">
+      <img src="assets/icon.png" alt="">
+      <span class="name-latin">Mithkar</span>
+    </a>
+    <nav>
+      <a href="#features">Features</a>
+      <a href="privacy.html">Privacy policy</a>
+      <a href="mailto:ibtihal.alhejaili@gmail.com">Contact</a>
+    </nav>
+    <span>© 2026 Mithkar</span>
+  </div>
 </footer>
 
-</div>
 </body>
 </html>
