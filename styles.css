@@ -99,11 +99,11 @@ img { max-width: 100%; display: block; }
 .nav { display: flex; align-items: center; gap: 1.75rem; font-size: .95rem; font-weight: 500; }
 .nav a { color: var(--muted); transition: color .15s; }
 .nav a:hover { color: var(--ink); }
-.nav .lang {
+.lang {
   border: 1px solid var(--line); border-radius: 999px;
   padding: .3rem .9rem; color: var(--ink);
 }
-.nav .lang:hover { border-color: var(--green); color: var(--green); }
+.lang:hover { border-color: var(--green); color: var(--green); }
 .theme-toggle {
   width: 2.3rem; height: 2.3rem; border-radius: 999px;
   border: 1px solid var(--line); background: transparent; color: var(--ink);
@@ -329,7 +329,7 @@ img { max-width: 100%; display: block; }
   .nav .hide-mobile { display: none; }
   .site-header .wrap { height: 4rem; padding-inline: 1rem; }
   .brand img { width: 32px; height: 32px; }
-  .nav .lang { padding-inline: .7rem; }
+  .lang { padding-inline: .7rem; }
   .section { padding-block: 3.5rem; }
   .privacy-grid { padding: 1.5rem; }
   .privacy-section { padding-block: 3.5rem; }
@@ -373,9 +373,11 @@ img { max-width: 100%; display: block; }
   .nav.open, [dir="rtl"] .nav.open { transform: translateX(0); }
   .nav .hide-mobile { display: block; }
   .nav-close { display: grid; align-self: flex-start; margin-bottom: .5rem; }
-  /* Pages with a drawer move the language switch to the bottom of it; pages
-     without one (privacy, contact) keep it in the top bar. */
-  .lang-drawer { display: inline-flex; margin-top: auto; }
+  /* Pages with a drawer move the language switch into it, set apart by colour
+     rather than a border; pages without one keep the pill in the top bar. */
+  .lang-drawer { display: inline-flex; }
+  .nav .lang-drawer { color: var(--green); }
+  .nav .lang-drawer:hover { color: var(--green-deep); }
   .has-drawer .header-actions .lang { display: none; }
 }
 
