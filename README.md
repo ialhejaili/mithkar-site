@@ -59,24 +59,3 @@ Full policy: [English](https://mithkar.ibtihal.dev/privacy-en.html) · [العر
 ## Contact
 
 Feedback, bug reports, notes on the adhkar texts, and privacy questions: [support@ibtihal.dev](mailto:support@ibtihal.dev)
-
-## The site
-
-A static site: plain HTML and CSS with a little JavaScript, no build step.
-
-- **Home:** `index.html` (Arabic) and `en.html` (English)
-- **Privacy policy:** `privacy.html` and `privacy-en.html`
-- **Contact:** `contact.html` and `contact-en.html`
-- `styles.css` holds all styles for both directions. `nav.js` runs the mobile drawer menu.
-- `assets/` holds the app icon and the screenshots, each in light and dark. The site swaps them with its theme toggle.
-- Fonts are IBM Plex Sans Arabic, IBM Plex Sans and Amiri, loaded from Google Fonts.
-
-To preview it locally, serve the folder:
-
-```bash
-python3 -m http.server 8000
-```
-
-Then open http://localhost:8000.
-
-Every push to `main` deploys to [mithkar.ibtihal.dev](https://mithkar.ibtihal.dev) through GitHub Pages; `CNAME` sets the domain. Pages link `styles.css?v=…`, so bump that version in all six pages when you change the stylesheet.
